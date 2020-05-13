@@ -1,0 +1,206 @@
+.ProfileContainer {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+
+.profileDetails {
+  font-size: 1.4em;
+  width: 50vw;
+  min-height: 60vh;
+}
+
+.ProfileIcons {
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.ProfileIcons div {
+  display: flex;
+  justify-content: center;
+}
+
+.ProfileIcons div *:nth-child(1) {
+  margin: 0;
+}
+
+.ProfileIcons div *:nth-child(2) {
+  min-height: 10px;
+  padding: 0;
+  margin: 0;
+}
+
+.redirects {
+  display: flex;
+  justify-content: center;
+}
+
+.redirects li {
+  list-style: none;
+  margin: auto;
+  transition: all 0.5s ease-in-out;
+}
+
+.redirects li:hover {
+  transform: scale(1.2);
+}
+
+.redirects img {
+  background-color: #ffff;
+  min-height: 50px;
+  width: 50px;
+}
+
+.profile {
+  min-height: 70vh;
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.profile img {
+  height: 400px;
+  width: 350px;
+  border: 3px solid #121212;
+  border-radius: 50px;
+}
+
+.download_btn {
+  border: 2px solid #121212;
+  padding: 1rem;
+  border-radius: 15px 25px;
+  color: #121212;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  justify-self: center;
+  width: 10rem;
+  background: none;
+  background-color: #ffff;
+  align-self: center;
+  text-decoration: none;
+  transition: all 0.5s ease-in-out;
+}
+
+.download_btn:hover {
+  cursor: pointer;
+  background-color: #121212;
+  color: #ffff;
+}
+
+.techStack {
+  width: 100vw;
+  min-height: 100vh;
+  text-align: center;
+  transform: translateY(30vh);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease-out, transform 1s ease-out, visibility 1s ease-out;
+  will-change: opacity, transform, visibility;
+}
+
+h2 {
+  font-size: 2.5em;
+}
+
+.stackImgs {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  grid-template-rows: auto auto;
+  justify-content: space-evenly;
+  align-items: center;
+  grid-gap: 10vh;
+  margin-top: 100px;
+}
+
+.stackImgs img {
+  height: 100px;
+  width: 100px;
+  border-radius: 10px;
+  background-color: #ffff;
+  transition: all 0.5s ease-in-out;
+}
+
+.stackImgs img:hover {
+  transform: scale(1.2);
+  background-color: #121212;
+}
+
+.proficiency {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.profCard {
+  max-width: 25vw;
+  min-height: 30vh;
+  transition: all 0.5s ease-in-out;
+  border-radius: 20px;
+  background: none;
+}
+
+.profCard img {
+  border-radius: 50px;
+}
+
+.profCard:hover {
+  transform: scale(1.2);
+  z-index: 1000;
+}
+
+.activePage {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+
+@media only screen and (max-width: 1000px) {
+  .ProfileContainer {
+    flex-direction: column;
+  }
+  .profileDetails {
+    width: 100vw;
+    padding: 10px;
+  }
+
+  .profileDetails p {
+    padding: 10px;
+  }
+
+  .stackImgs {
+    grid-template-columns: auto auto auto;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .ProfileIcons,
+  .proficiency,
+  .redirects {
+    flex-direction: column;
+  }
+
+  .stackImgs {
+    grid-template-columns: auto auto;
+  }
+
+  .redirects *,
+  .ProfileIcons div {
+    margin: 10px;
+  }
+
+  .profCard {
+    min-height: 20vh;
+    width: 30vh;
+  }
+
+  .profCard * {
+    font-size: 1em;
+  }
+}
