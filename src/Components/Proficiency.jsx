@@ -31,7 +31,7 @@ export default () => {
         </div>
         <div className={styles.profCard}>
           <img src="https://santhisrikh.github.io/images/data.png" />
-          <h2>DATA STRUCTURES & ALGORITHMS</h2>
+          <h2>DS & Algo</h2>
           <p>Have deep understanding about Data Structure & Algorithms.</p>
         </div>
       </div>

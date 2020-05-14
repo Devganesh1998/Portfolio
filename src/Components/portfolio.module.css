@@ -11,6 +11,7 @@
   font-size: 1.4em;
   width: 50vw;
   min-height: 60vh;
+  background: none;
 }
 
 .ProfileIcons {
@@ -129,7 +130,17 @@ h2 {
 
 .stackImgs img:hover {
   transform: scale(1.2);
-  background-color: #121212;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.githubStats {
+  width: 100vw;
+  text-align: center;
+  transform: translateY(30vh);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease-out, transform 1s ease-out, visibility 1s ease-out;
+  will-change: opacity, transform, visibility;
 }
 
 .proficiency {
@@ -140,25 +151,161 @@ h2 {
 
 .profCard {
   max-width: 25vw;
-  min-height: 30vh;
-  transition: all 0.5s ease-in-out;
+  height: 60vh;
+  transition: all 0.3s ease-in-out;
   border-radius: 20px;
   background: none;
+  background-color: #ffff;
+  color: #121212;
+  border: 5px solid #808080;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .profCard img {
+  margin-top: 5%;
   border-radius: 50px;
 }
 
 .profCard:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
   z-index: 1000;
+  background-color: #121212;
+  color: #ffff;
+}
+
+.CardContainer {
+  width: 98vw;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto;
+  grid-gap: 5vh;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.ProjectCard {
+  height: 60vh;
+  width: 25vw;
+  padding: 10px;
+  background: none;
+  background-color: #ffff;
+  color: #121212;
+  border: 0.5vh solid #808080;
+  border-radius: 2vh;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  overflow: hidden;
+  font-size: 1rem;
+}
+
+.ProjectCard * {
+  margin: 0;
+}
+
+.ProjectCard h4,
+.cardIcons {
+  margin-top: 12px;
+}
+
+.ProjectCard > img {
+  height: 40vh;
+  width: 100%;
+  border: 0.3vh solid #808080;
+  border-radius: 2vh;
+  transition: all 0.65s;
+}
+
+.ProjectCard:hover > img {
+  height: 20vh;
+  border: 0.3vh solid #ffff;
+}
+
+.ProjectCard:hover {
+  background-color: #121212;
+  color: #ffff;
+}
+
+.cardIcons {
+  height: 5vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.cardIcons img {
+  height: 40px;
+  width: 30px;
+}
+
+.cardRedirects {
+  margin-top: 30px;
+  height: 5vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.cardRedirects a {
+  text-decoration: none;
+  height: 50px;
+  width: 150px;
+}
+
+.cardRedirects Button {
+  height: 50px;
+  width: 130px;
+  font-weight: 600;
+  background-color: #121212;
+  color: #ffff;
+}
+
+.cardRedirects Button:hover {
+  background-color: #ffff;
+  color: #121212;
+}
+
+.statContainer {
+  min-height: 30vh;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: auto;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  transform: translateY(30vh);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease-out, transform 1s ease-out, visibility 1s ease-out;
+  will-change: opacity, transform, visibility;
+}
+
+.statContainer h2 {
+  min-width: 200px;
+  min-height: 60px;
+  color: #ffff;
+  border: 10px solid #808080;
+  border-radius: 20px;
+  background-color: #121212;
+  transition: all 0.7s;
+}
+
+.statContainer h2:hover {
+  transform: scale(1.2);
+  border: 10px solid #b0c4de;
 }
 
 .activePage {
   opacity: 1;
   visibility: visible;
   transform: none;
+}
+
+@media only screen and (max-width: 1400px) {
+  .ProjectCard {
+    font-size: 0.78rem;
+  }
 }
 
 @media only screen and (max-width: 1000px) {
@@ -177,30 +324,63 @@ h2 {
   .stackImgs {
     grid-template-columns: auto auto auto;
   }
+
+  .CardContainer {
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+  }
+
+  .ProjectCard {
+    width: 38vw;
+    font-size: 0.76rem;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .proficiency {
+    flex-direction: column;
+  }
+
+  .statContainer {
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+  }
+
+  .profCard {
+    min-height: 20vh;
+    min-width: 30vh;
+  }
+
+  .profCard * {
+    font-size: 1rem;
+  }
 }
 
 @media only screen and (max-width: 600px) {
-  .ProfileIcons,
-  .proficiency,
-  .redirects {
+  .ProfileIcons {
     flex-direction: column;
+  }
+
+  .statContainer {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto;
   }
 
   .stackImgs {
     grid-template-columns: auto auto;
   }
 
-  .redirects *,
   .ProfileIcons div {
     margin: 10px;
   }
 
-  .profCard {
-    min-height: 20vh;
-    width: 30vh;
+  .CardContainer {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto;
   }
 
-  .profCard * {
-    font-size: 1em;
+  .ProjectCard {
+    width: 80vw;
+    font-size: 1rem;
   }
 }
