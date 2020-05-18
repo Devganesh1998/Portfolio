@@ -1,9 +1,20 @@
 import IconData from "./IconSource";
 
-const { html, css, js, jquery, bootstrap } = IconData;
+const { html, css, js, jquery, bootstrap, react, redux } = IconData;
 
 export const cardData = {
   cardData: [
+    {
+      cardImg: "VehicleRenting.png",
+      cardHead: "Vehicle Renting",
+      cardBody:
+        "A Site used to rent cars and bikes and also has Admin functionalities such as adding Vehicle and updating Vehicles. This site has user data management, ie Login, Register, Booking..",
+      techStack: [react, redux, js, css, html],
+      links: {
+        github: "https://github.com/Devganesh1998/VehicleRenting",
+        demo: "https://vehicle-renting.netlify.app/",
+      },
+    },
     {
       cardImg: "MovieDatabase.png",
       cardHead: "Movie Finder",

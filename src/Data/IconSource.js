@@ -8,7 +8,7 @@ const js = "https://cdn.svgporn.com/logos/javascript.svg";
 const flask =
   "https://i7.pngguru.com/preview/509/951/613/flask-by-example-web-framework-python-bottle-bottle.jpg";
 const jquery =
-  "https://lh3.googleusercontent.com/proxy/Zi86TYplRErJgBqsikCroUjNJ-CRC1UFUO1djg1Qder2JLP-5_v9xMUFYRTfv5vjtNaA4TIxSIru_Xph9e_UOfUmzpr2ucW2yiH6EGwz4cRq3KM7kA";
+  "https://lh3.googleusercontent.com/proxy/OXS3SUoxn7zWMNzOAfkOCdjOMdZtraN5XJ7tCibVQWSQieDw32iVWC7PS4t9VU6XLeewXVZKuTtUv2cxstwnxRJKGFbIfapgM60d7MjtSQ4zf0a0h0JH6W65XjZM";
 
 export default {
   html,
