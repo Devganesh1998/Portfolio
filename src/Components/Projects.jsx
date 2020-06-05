@@ -4,23 +4,28 @@ import Card from "./SubComponents/Card";
 
 export default (props) => {
   const { cardData } = props;
-  const [isVisible, setVisible] = React.useState(true);
-  const domRef = React.useRef();
-  React.useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      console.log("entries");
-      entries.forEach((entry) => setVisible(entry.isIntersecting));
-    });
-    observer.observe(domRef.current);
-    return () => observer.unobserve(domRef.current);
-  }, []);
 
   return (
-    <div
-      className={`${styles.techStack} ${isVisible ? styles.activePage : ""}`}
-    >
-      <h2>My Projects</h2>
-      <div ref={domRef} className={styles.CardContainer}>
+    <div className={styles.techStack}>
+      <h2
+        data-aos="fade-up"
+        data-aos-offset="200"
+        data-aos-delay="600"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+        data-aos-once="false"
+      >
+        My Projects
+      </h2>
+      <div
+        className={styles.CardContainer}
+        data-aos="fade-up"
+        data-aos-offset="220"
+        data-aos-delay="800"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+        data-aos-once="false"
+      >
         {cardData.map((data) => {
           return <Card {...data} />;
         })}
