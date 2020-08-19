@@ -23,16 +23,16 @@ export default () => {
         data-aos-easing="ease-in-out"
         data-aos-once="false"
       >
-        <img src="https://cdn.svgporn.com/logos/html-5.svg" />
-        <img src="https://cdn.svgporn.com/logos/git-icon.svg" />
-        <img src="https://cdn.svgporn.com/logos/css-3.svg  " />
-        <img src="https://cdn.svgporn.com/logos/bootstrap.svg" />
-        <img src="https://cdn.svgporn.com/logos/javascript.svg" />
-        <img src="https://cdn.svgporn.com/logos/react.svg" />
-        <img src="https://cdn.svgporn.com/logos/redux.svg" />
-        <img src="https://cdn.svgporn.com/logos/python.svg" />
-        <img src="https://cdn.svgporn.com/logos/java.svg" />
-        <img src="https://cdn.svgporn.com/logos/mysql.svg" />
+        <img src="https://cdn.svgporn.com/logos/html-5.svg" alt="cardImg"/>
+        <img src="https://cdn.svgporn.com/logos/git-icon.svg" alt="cardImg"/>
+        <img src="https://cdn.svgporn.com/logos/css-3.svg  " alt="cardImg"/>
+        <img src="icons/nodejs.svg" alt="cardImg"/>
+        <img src="https://cdn.svgporn.com/logos/javascript.svg" alt="cardImg"/>
+        <img src="https://cdn.svgporn.com/logos/react.svg" alt="cardImg"/>
+        <img src="https://cdn.svgporn.com/logos/redux.svg" alt="cardImg"/>
+        <img src="https://i7.pngguru.com/preview/509/951/613/flask-by-example-web-framework-python-bottle-bottle.jpg" alt="cardImg"/>
+        <img src="https://a0.awsstatic.com/libra-css/images/site/touch-icon-iphone-114-smile.png" alt="cardImg"/>
+        <img src="https://cdn.svgporn.com/logos/mysql.svg" alt="cardImg"/>
       </div>
     </div>
   );

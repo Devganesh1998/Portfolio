@@ -6,20 +6,20 @@ export default (props) => {
   let { cardImg, cardHead, cardBody, techStack, links } = props;
   return (
     <div className={styles.ProjectCard}>
-      <img src={cardImg} alt="ProjectImg" />
+      <img src={cardImg} alt="projectImg" />
       <h2>{cardHead}</h2>
       <p>{cardBody}</p>
       <h4>Teck stack used :</h4>
       <div className={styles.cardIcons}>
         {techStack.map((item) => {
-          return <img src={item} />;
+          return <img src={item} alt="techImg"/>;
         })}
       </div>
       <div className={styles.cardRedirects}>
-        <a target="_blank" href={links.github}>
+        <a target="_blank" rel="noopener noreferrer" href={links.github}>
           <Button>View Code</Button>
         </a>
-        <a target="_blank" href={links.demo}>
+        <a target="_blank" rel="noopener noreferrer" href={links.demo}>
           <Button>View Demo</Button>
         </a>
       </div>

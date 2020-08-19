@@ -1,6 +1,9 @@
 import React from "react";
 import styles from "./portfolio.module.css";
-import Card from "./SubComponents/Card";
+// import Card from "./SubComponents/Card";
+import { Button } from 'antd';
+import { Card } from "antd";
+const { Meta } = Card;
 
 export default (props) => {
   const { cardData } = props;
@@ -26,9 +29,38 @@ export default (props) => {
         data-aos-easing="ease-in-out"
         data-aos-once="false"
       >
-        {cardData.map((data) => {
-          return <Card {...data} />;
-        })}
+        {cardData &&
+          cardData.map((ele) => {
+            return (
+              <Card
+                cover={
+                  <img
+                    alt="example"
+                    src={ele.cardImg}
+                    className="p-1"
+                    height="200px"
+                  />
+                }
+                actions={[
+                  <Button onClick={() => window.open(ele.links.github)} type="primary">
+                    Github
+                  </Button>,
+                  <Button onClick={() => window.open(ele.links.demo)} type="primary">
+                    Demo
+                  </Button>,
+                ]}
+              >
+                <Meta title={ele.cardHead} description={ele.cardBody} />
+                <Meta
+                  title="Teck stack used :"
+                  description=""
+                />
+                {ele.techStack.map((img) => (
+                  <img src={img} className={styles.projectIcon} alt=".." />
+                ))}
+              </Card>
+            );
+          })}
       </div>
     </div>
   );

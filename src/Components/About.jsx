@@ -34,7 +34,7 @@ export default (props) => {
         <div>
           <ul className={styles.redirects}>
             <li>
-              <a target="_blank" href="https://github.com/devganesh1998">
+              <a target="_blank" rel="noopener noreferrer" href="https://github.com/devganesh1998">
                 <img
                   src="https://cdn0.iconfinder.com/data/icons/octicons/1024/mark-github-512.png"
                   alt="GitHubImg"
@@ -43,7 +43,7 @@ export default (props) => {
             </li>
             <li>
               <a
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
                 href="https://www.linkedin.com/in/dev-ganesh-3641aa19a/"
               >
                 <img
@@ -53,7 +53,7 @@ export default (props) => {
               </a>
             </li>
             <li>
-              <a target="_blank" href="https://www.hackerrank.com/devganesh91">
+              <a target="_blank" rel="noopener noreferrer" href="https://www.hackerrank.com/devganesh91">
                 <img
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTvmjNQawHf52Z-zUUcV1yZC7DEj0TL4kc7kalaKowWZZC3FR1h&usqp=CAU"
                   alt="HackerRankImg"
@@ -67,8 +67,8 @@ export default (props) => {
         <img src="ProfilePic.png" alt="ProfileImg" />
         <a
           className={styles.download_btn}
-          href="https://drive.google.com/open?id=1ziL_iTLMEwhstK4VTYycT-uqaeI73QFw"
-          target="_blank"
+          href="https://drive.google.com/file/d/1bU_k-sPMusoZh42A-HbInRiteg6Fwjte/view?usp=sharing"
+          target="_blank" rel="noopener noreferrer"
         >
           My Resume
         </a>

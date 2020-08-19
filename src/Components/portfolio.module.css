@@ -12,6 +12,9 @@
   width: 50vw;
   min-height: 60vh;
   background: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .ProfileIcons {
@@ -38,6 +41,7 @@
 .redirects {
   display: flex;
   justify-content: center;
+  margin-top: 15px;
 }
 
 .redirects li {
@@ -169,6 +173,16 @@ h2 {
   z-index: 1000;
   background-color: #121212;
   color: #ffff;
+}
+
+.profCard:hover h2 {
+  color: #ffff;
+}
+
+.projectIcon {
+  margin: 5px;
+  width: 20px;
+  height: 20px;
 }
 
 .CardContainer {

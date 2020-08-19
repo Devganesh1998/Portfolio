@@ -1,15 +1,26 @@
 import IconData from "./IconSource";
 
-const { html, css, js, jquery, bootstrap, react, redux } = IconData;
+const { html, css, js, jquery, bootstrap, react, redux, node, mysql, redis, antd, aws } = IconData;
 
 export const cardData = {
   cardData: [
+    {
+      cardImg: "VrboClone.png",
+      cardHead: "Vrbo Clone",
+      cardBody:
+        "Vrbo Clone is the clone of website Vrbo offering rental bookings for housing properties. Uses Redis and cookies for Session management. Integrated GoogleMap, Razorpay",
+      techStack: [node, redis, mysql, aws, react, redux ],
+      links: {
+        github: "https://github.com/pandayzyx/VrboClone",
+        demo: "https://vrboclone.devganesh.tech",
+      },
+    },
     {
       cardImg: "VehicleRenting.png",
       cardHead: "Vehicle Renting",
       cardBody:
         "A Site used to rent cars and bikes and also has Admin functionalities such as adding Vehicle and updating Vehicles. This site has user data management, ie Login, Register, Booking..",
-      techStack: [react, redux, js, css, html],
+      techStack: [react, redux, antd, js, css, html],
       links: {
         github: "https://github.com/Devganesh1998/VehicleRenting",
         demo: "https://vehicle-renting.netlify.app/",

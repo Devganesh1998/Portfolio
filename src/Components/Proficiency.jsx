@@ -24,17 +24,17 @@ export default () => {
         data-aos-once="false"
       >
         <div className={styles.profCard}>
-          <img src="https://santhisrikh.github.io/images/react.png" />
+          <img src="https://santhisrikh.github.io/images/react.png" alt="CardImg" />
           <h2>Front End</h2>
           <p>Proficient with Javascript & React Applications.</p>
         </div>
         <div className={styles.profCard}>
-          <img src="https://santhisrikh.github.io/images/back.png" />
+          <img src="https://santhisrikh.github.io/images/back.png" alt="CardImg" />
           <h2>Back End</h2>
           <p>Able to develop MERN Stack application using latest technology.</p>
         </div>
         <div className={styles.profCard}>
-          <img src="https://santhisrikh.github.io/images/data.png" />
+          <img src="https://santhisrikh.github.io/images/data.png" alt="CardImg" />
           <h2>DS & Algo</h2>
           <p>Have deep understanding about Data Structure & Algorithms.</p>
         </div>

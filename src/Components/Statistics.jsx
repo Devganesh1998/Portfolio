@@ -15,7 +15,7 @@ export default (props) => {
 
   return (
     <React.Fragment>
-      <h2 style={{ textAlign: "center" }}>I have completed</h2>
+      <h2 style={{ textAlign: "center", marginTop: "40px" }}>I have completed</h2>
       <div
         className={`${styles.statContainer} ${
           isVisible ? styles.activePage : ""
@@ -31,7 +31,7 @@ export default (props) => {
           <p>Hackerrank Problems</p>
         </div>
         <div>
-          <h2>200+</h2>
+          <h2>600+</h2>
           <p>Git Commits</p>
         </div>
         <div>
