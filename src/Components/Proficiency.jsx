@@ -12,7 +12,7 @@ export default () => {
         data-aos-easing="ease-in-out"
         data-aos-once="false"
       >
-        My Proficiency
+        My Proficiencies
       </h2>
       <div
         className={styles.proficiency}

@@ -52,6 +52,7 @@ export default (props) => {
               >
                 <Meta title={ele.cardHead} description={ele.cardBody} />
                 <Meta
+                  style={{marginTop: "10px"}}
                   title="Teck stack used :"
                   description=""
                 />

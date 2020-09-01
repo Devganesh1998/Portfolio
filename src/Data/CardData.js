@@ -1,6 +1,6 @@
 import IconData from "./IconSource";
 
-const { html, css, js, jquery, bootstrap, react, redux, node, mysql, redis, antd, aws } = IconData;
+const { html, css, js, jquery, bootstrap, react, redux, node, mysql, redis, antd, aws, flask } = IconData;
 
 export const cardData = {
   cardData: [
@@ -13,6 +13,17 @@ export const cardData = {
       links: {
         github: "https://github.com/pandayzyx/VrboClone",
         demo: "https://vrboclone.devganesh.tech",
+      },
+    },
+    {
+      cardImg: "twitterclone.png",
+      cardHead: "Twitter Clone",
+      cardBody:
+        "Twitter Clone is the custom clone version of website Twitter where users can view tweets who they are following and follow / unfollow other users and like their tweets. Uses Redis and cookies for Session management.",
+      techStack: [flask, redis, mysql, aws, react, redux, antd ],
+      links: {
+        github: "https://github.com/Devganesh1998/twitterClone",
+        demo: "https://twitterclone.devganesh.tech",
       },
     },
     {
@@ -59,16 +70,16 @@ export const cardData = {
         demo: "https://cocky-swartz-8de7d5.netlify.app/",
       },
     },
-    {
-      cardImg: "BillGenerator.png",
-      cardHead: "BillGenerator",
-      cardBody:
-        "A simple bill generator web-page created using plain HTML, CSS, Javascript. Have options to Tip and applys discount based on type of day.",
-      techStack: [html, css, js],
-      links: {
-        github: "https://github.com/Devganesh1998/masai-sprint-2",
-        demo: "https://flamboyant-gates-e03f3b.netlify.app/",
-      },
-    },
+    // {
+    //   cardImg: "BillGenerator.png",
+    //   cardHead: "BillGenerator",
+    //   cardBody:
+    //     "A simple bill generator web-page created using plain HTML, CSS, Javascript. Have options to Tip and applys discount based on type of day.",
+    //   techStack: [html, css, js],
+    //   links: {
+    //     github: "https://github.com/Devganesh1998/masai-sprint-2",
+    //     demo: "https://flamboyant-gates-e03f3b.netlify.app/",
+    //   },
+    // },
   ],
 };
