@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./portfolio.module.css";
+import emailjs from "emailjs-com";
 // import Card from "./SubComponents/Card";
 import { Button } from 'antd';
 import { Card } from "antd";
@@ -7,6 +8,40 @@ const { Meta } = Card;
 
 export default (props) => {
   const { cardData } = props;
+  
+  const handleViewGitHubOnclick = (project) => {
+    let templateParams = {
+      from_name: "devganesh1998@gmail.com",
+      to_name: "devganesh91@gmail.com",
+      subject: `${project.cardHead}'s Github Viewed`,
+      message_html: `<div><h1>${project.cardHead} Github is being viewed by someone</h1><br><a target="_blank" href="${project.links.github}">Click here to got to the github page</a></div>`,
+    };
+    emailjs.send(
+      process.env.REACT_APP_EMAILJS_SERVICEID,
+      process.env.REACT_APP_EMAILJS_TEMPLATEID,
+      templateParams,
+      process.env.REACT_APP_EMAILJS_USERID
+    );
+    console.log(project, "git");
+    window.open(project.links.github)
+  }
+
+  const handleViewDemoOnclick = (project) => {
+    let templateParams = {
+      from_name: "devganesh1998@gmail.com",
+      to_name: "devganesh91@gmail.com",
+      subject: `${project.cardHead}'s Demo Viewed`,
+      message_html: `<div><h1>${project.cardHead} Demo is being viewed by someone</h1><br><a target="_blank" href="${project.links.demo}">Click here to got to the demo page</a></div>`,
+    };
+    emailjs.send(
+      process.env.REACT_APP_EMAILJS_SERVICEID,
+      process.env.REACT_APP_EMAILJS_TEMPLATEID,
+      templateParams,
+      process.env.REACT_APP_EMAILJS_USERID
+    );
+    console.log(project, "demo");
+    window.open(project.links.demo)
+  }
 
   return (
     <div className={styles.techStack}>
@@ -42,10 +77,10 @@ export default (props) => {
                   />
                 }
                 actions={[
-                  <Button onClick={() => window.open(ele.links.github)} type="primary">
+                  <Button onClick={() => handleViewGitHubOnclick(ele)} type="primary">
                     Github
                   </Button>,
-                  <Button onClick={() => window.open(ele.links.demo)} type="primary">
+                  <Button onClick={() => handleViewDemoOnclick(ele)} type="primary">
                     Demo
                   </Button>,
                 ]}
