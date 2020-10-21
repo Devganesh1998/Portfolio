@@ -116,12 +116,13 @@ h2 {
   justify-content: space-evenly;
   align-items: center;
   grid-gap: 10vh;
+  margin: 20px;
   margin-top: 100px;
 }
 
 .stackImgs img {
-  height: 100px;
-  width: 100px;
+  height: 150px;
+  width: 150px;
   border-radius: 10px;
   background-color: #ffff;
   transition: all 0.5s ease-in-out;
@@ -133,7 +134,12 @@ h2 {
 }
 
 .githubStats {
+  margin-top: 80px;
+  margin-bottom: 100px;
   width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   transform: translateY(30vh);
   opacity: 0;
@@ -144,29 +150,37 @@ h2 {
 
 .proficiency {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
 }
 
 .profCard {
-  min-width: 20vw;
-  min-height: 60vh;
+  padding: 10px;
+  width: 350px;
+  min-height: 750px;
+  margin-bottom: 30px;
   margin-top: 15px;
   transition: all 0.3s ease-in-out;
-  border-radius: 20px;
+  border-radius: 10px;
   background: none;
   background-color: #ffff;
   color: #121212;
-  border: 5px solid #808080;
+  border: 1px solid #808080;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .profCard img {
-  margin-top: 5%;
-  border-radius: 50px;
+  height: 250px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.profCard h2 {
+  margin-bottom: 10px;
 }
 
 .profCard:hover {
@@ -319,13 +333,14 @@ h2 {
   transform: none;
 }
 
+.antdCardCont {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
 @media only screen and (max-width: 1400px) {
   .ProjectCard {
     font-size: 0.78rem;
-  }
-
-  .profCard {
-    max-width: 30vw;
   }
 }
 
@@ -340,10 +355,6 @@ h2 {
 
   .profileDetails p {
     padding: 10px;
-  }
-
-  .profCard {
-    min-width: 25vw;
   }
 
   .stackImgs {
@@ -362,32 +373,28 @@ h2 {
 }
 
 @media only screen and (max-width: 800px) {
-  .proficiency {
-    flex-direction: column;
-  }
-
   .statContainer {
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
   }
 
-  .profCard {
-    min-height: 20vh;
-    min-width: 30vh;
-  }
-
-  .profCard * {
-    font-size: 1rem;
-  }
-
   .ProjectCard {
     font-size: 0.6rem;
+  }
+
+  .techStack {
+    margin-top: 80px;
   }
 }
 
 @media only screen and (max-width: 600px) {
   .ProfileIcons {
     flex-direction: column;
+  }
+
+  .profCard {
+    width: 100%;
+    margin: 30px;
   }
 
   .statContainer {
@@ -411,5 +418,9 @@ h2 {
   .ProjectCard {
     width: 93vw;
     font-size: 0.8rem;
+  }
+
+  .antdCardCont {
+    margin: 20px;
   }
 }
