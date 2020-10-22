@@ -1,14 +1,11 @@
 import {
 	aws,
-	elasticSearch,
-	kafka,
-	logstash,
-	nextjs,
 	nodejs,
 	postgreSQL,
 	react,
-	redis,
+	nextjs,
 	webpack,
+	redis,
 	antd,
 	flask,
 	redux,
@@ -21,6 +18,50 @@ import {
 
 export const cardData = {
 	cardData: [
+		{
+			cardImg: "SpotifyProfile.png",
+			cardHead: "Spotify Profile",
+			cardBody:
+				"A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.",
+			techStack: [nodejs, postgreSQL, aws, nextjs, webpack],
+			links: {
+				github: "https://github.com/Devganesh1998/dwitter_server",
+				demo: "https://spotify-profile.herokuapp.com",
+			},
+		},
+		{
+			cardImg: "agoda.png",
+			cardHead: "Agoda Clone",
+			cardBody:
+				"Agoda Clone is the clone of website Vrbo offering rental bookings for housing properties. Uses Redis and cookies for Session management. Integrated GoogleMap, Razorpay.",
+			techStack: [react, redux, nodejs, redis, postgreSQL, aws, antd],
+			links: {
+				github: "https://github.com/Devganesh1998/dwitter_server",
+				demo: "https://agoda-clone.netlify.app",
+			},
+		},
+		{
+			cardImg: "hotelbooking.png",
+			cardHead: "Hotel reservation",
+			cardBody:
+				"Hotel reservation is used to make reservation for a hotel called Luxury, on the website you can see the rooms, price, descriptions, among others. This aplication was developed with ReactJS and Contentful.",
+			techStack: [react, redux, nodejs, postgreSQL, webpack],
+			links: {
+				github: "https://github.com/Devganesh1998/dwitter_server",
+				demo: "https://luxuryhotelreservation.netlify.app",
+			},
+		},
+		{
+			cardImg: "blog.png",
+			cardHead: "Blog App",
+			cardBody:
+				"Blog app is the web app where user can add or delete blogs and the user can comment for the post. The user can upload profile picture for their account.",
+			techStack: [react, redux, nodejs, postgreSQL, webpack],
+			links: {
+				github: "https://github.com/Devganesh1998/dwitter_server",
+				demo: "https://blogs-app.netlify.app",
+			},
+		},
 		{
 			cardImg: "VrboClone.png",
 			cardHead: "Vrbo Clone",
@@ -66,25 +107,14 @@ export const cardData = {
 			},
 		},
 		{
-			cardImg: "Dinosaurs.png",
-			cardHead: "Dinosaur's Info",
-			cardBody:
-				"A simple multi-page site which contains details of dinosaurs such as their extinction, types and history. Created using plain HTML and CSS.",
-			techStack: [html, css],
-			links: {
-				github: "https://github.com/Devganesh1998/masai-sprint-1",
-				demo: "https://zealous-hopper-460016.netlify.app/",
-			},
-		},
-		{
-			cardImg: "Tic-Tac-Toe.png",
+			cardImg: "Tic-Tac-Toe.jpg",
 			cardHead: "Tic-Tac-Toe",
 			cardBody:
 				"A Javascript based two-player game called as Tic-Tac-Toe. This classic game is build using plain HTML, CSS, Javascript.",
 			techStack: [html, css, js],
 			links: {
 				github: "https://github.com/Devganesh1998/Tic-Tac-Toe",
-				demo: "https://cocky-swartz-8de7d5.netlify.app/",
+				demo: "https://tic-tac-toe-gameproject.netlify.app",
 			},
 		},
 	],
