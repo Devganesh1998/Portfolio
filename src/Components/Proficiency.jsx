@@ -7,7 +7,7 @@ const Proficiencies = () => (
 		<h2
 			data-aos="fade-up"
 			data-aos-offset="200"
-			data-aos-delay="600"
+			data-aos-delay="100"
 			data-aos-duration="1000"
 			data-aos-easing="ease-in-out"
 			data-aos-once="false"
@@ -18,7 +18,7 @@ const Proficiencies = () => (
 			className={styles.proficiency}
 			data-aos="fade-up"
 			data-aos-offset="220"
-			data-aos-delay="800"
+			data-aos-delay="150"
 			data-aos-duration="1000"
 			data-aos-easing="ease-in-out"
 			data-aos-once="false"
