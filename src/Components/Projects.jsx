@@ -8,6 +8,18 @@ const { Meta } = Card;
 
 const Projects = (props) => {
 	const { cardData } = props;
+	const [isVisible, setVisible] = React.useState(false);
+	const domRef = React.useRef();
+
+	React.useEffect(() => {
+		const observer = new IntersectionObserver((entries) => {
+			console.log(entries);
+			entries.forEach((entry) => setVisible(entry.isIntersecting));
+		});
+		observer.observe(domRef.current);
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+		return () => observer.unobserve(domRef.current);
+	}, []);
 
 	const handleViewGitHubOnclick = (project) => {
 		console.log(project, "git");
@@ -28,14 +40,17 @@ const Projects = (props) => {
 	};
 
 	useEffect(() => {
-		ReactGA.event({
-			category: "Section visited",
-			action: "Projects visited",
-		});
-	}, []);
+		if (isVisible) {
+			console.log("GA metric sent - Section visited Projects");
+			ReactGA.event({
+				category: "Section visited",
+				action: "Projects visited",
+			});
+		}
+	}, [isVisible]);
 
 	return (
-		<div className={styles.techStack}>
+		<div className={styles.techStack} ref={domRef}>
 			<h2
 				data-aos="fade-up"
 				data-aos-offset="200"
