@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 // import Card from "./SubComponents/Card";
 import { Button } from "antd";
 import { Card } from "antd";
+import ReactGA from "react-ga";
 import styles from "../styles/portfolio.module.css";
 const { Meta } = Card;
 
@@ -10,13 +11,28 @@ const Projects = (props) => {
 
 	const handleViewGitHubOnclick = (project) => {
 		console.log(project, "git");
+		ReactGA.event({
+			category: "Github opened",
+			action: project.links.github,
+		});
 		window.open(project.links.github);
 	};
 
 	const handleViewDemoOnclick = (project) => {
 		console.log(project, "demo");
+		ReactGA.event({
+			category: "Demo visited",
+			action: project.links.demo,
+		});
 		window.open(project.links.demo);
 	};
+
+	useEffect(() => {
+		ReactGA.event({
+			category: "Section visited",
+			action: "Projects visited",
+		});
+	}, []);
 
 	return (
 		<div className={styles.techStack}>
