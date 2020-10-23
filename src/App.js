@@ -7,6 +7,10 @@ import Proficiency from "./Components/Proficiency";
 import Projects from "./Components/Projects";
 import { cardData } from "./Data/CardData";
 import GithubStat from "./Components/GithubStat";
+import ReactGA from 'react-ga';
+
+ReactGA.initialize('UA-174139859-2');
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 function App() {
   return (
