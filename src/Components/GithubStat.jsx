@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
+import ReactGA from "react-ga";
 import GitHubCalander from "react-github-calendar";
 import styles from "../styles/portfolio.module.css";
 
 const GitHubStats = (props) => {
+	useEffect(() => {
+		ReactGA.event({
+			category: "Section visited",
+			action: "GithubStats",
+		});
+	}, []);
 	const [isVisible, setVisible] = React.useState(true);
 	const domRef = React.useRef();
 	React.useEffect(() => {
