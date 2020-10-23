@@ -4,13 +4,7 @@ import GitHubCalander from "react-github-calendar";
 import styles from "../styles/portfolio.module.css";
 
 const GitHubStats = (props) => {
-	useEffect(() => {
-		ReactGA.event({
-			category: "Section visited",
-			action: "GithubStats",
-		});
-	}, []);
-	const [isVisible, setVisible] = React.useState(true);
+	const [isVisible, setVisible] = React.useState(false);
 	const domRef = React.useRef();
 	React.useEffect(() => {
 		const observer = new IntersectionObserver((entries) => {
@@ -21,6 +15,16 @@ const GitHubStats = (props) => {
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 		return () => observer.unobserve(domRef.current);
 	}, []);
+
+	useEffect(() => {
+		if (isVisible) {
+			console.log('GA metric sent - Section visited GithubStats');
+			ReactGA.event({
+				category: "Section visited",
+				action: "GithubStats",
+			});
+		}
+	}, [isVisible]);
 
 	return (
 		<div

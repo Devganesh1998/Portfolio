@@ -1,12 +1,37 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
+import ReactGA from "react-ga";
 import EmailIcon from "@material-ui/icons/Email";
 import CallIcon from "@material-ui/icons/Call";
 import LocationOnOutlinedIcon from "@material-ui/icons/LocationOnOutlined";
 import styles from "../styles/portfolio.module.css";
 
 const About = (props) => {
+	const [isVisible, setVisible] = useState(false);
+	const domRef = useRef();
+
+	useEffect(() => {
+		const observer = new IntersectionObserver((entries) => {
+			console.log(entries);
+			entries.forEach((entry) => setVisible(entry.isIntersecting));
+		});
+		observer.observe(domRef.current);
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+		return () => observer.unobserve(domRef.current);
+	}, []);
+
+	useEffect(() => {
+		if (isVisible) {
+			console.log("GA metric sent - Section visited AboutMe");
+
+			ReactGA.event({
+				category: "Section visited",
+				action: "AboutMe",
+			});
+		}
+	}, [isVisible]);
+
 	return (
-		<div className={styles.ProfileContainer}>
+		<div className={styles.ProfileContainer} ref={domRef}>
 			<div className={styles.profileDetails}>
 				<h1>Dev Ganesh Pandian</h1>
 
