@@ -30,6 +30,13 @@ const About = (props) => {
 		}
 	}, [isVisible]);
 
+	const handleResumeClick = () => {
+		ReactGA.event({
+			category: "click",
+			action: 'Resume',
+		});
+	}
+
 	return (
 		<div className={styles.ProfileContainer} ref={domRef}>
 			<div className={styles.profileDetails}>
@@ -104,6 +111,7 @@ const About = (props) => {
 					className={styles.download_btn}
 					href="https://drive.google.com/file/d/1vVtoOPo63gtmNWrrTP1PzrcPhLjrZ7Jb/view?usp=sharing"
 					target="_blank"
+					onClick={handleResumeClick}
 					rel="noopener noreferrer"
 				>
 					My Resume
