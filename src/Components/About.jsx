@@ -30,12 +30,12 @@ const About = (props) => {
 		}
 	}, [isVisible]);
 
-	const handleResumeClick = () => {
+	const handleOnClick = (action) => {
 		ReactGA.event({
 			category: "click",
-			action: 'Resume',
+			action,
 		});
-	}
+	};
 
 	return (
 		<div className={styles.ProfileContainer} ref={domRef}>
@@ -69,6 +69,7 @@ const About = (props) => {
 							<a
 								target="_blank"
 								rel="noopener noreferrer"
+								onClick={() => handleOnClick("github")}
 								href="https://github.com/devganesh1998"
 							>
 								<img
@@ -81,6 +82,7 @@ const About = (props) => {
 							<a
 								target="_blank"
 								rel="noopener noreferrer"
+								onClick={() => handleOnClick("linkedin")}
 								href="https://www.linkedin.com/in/devganesh"
 							>
 								<img
@@ -92,6 +94,7 @@ const About = (props) => {
 						<li>
 							<a
 								target="_blank"
+								onClick={() => handleOnClick("twitter")}
 								rel="noopener noreferrer"
 								href="https://twitter.com/DevGanesh10"
 							>
@@ -111,7 +114,7 @@ const About = (props) => {
 					className={styles.download_btn}
 					href="https://drive.google.com/file/d/1vVtoOPo63gtmNWrrTP1PzrcPhLjrZ7Jb/view?usp=sharing"
 					target="_blank"
-					onClick={handleResumeClick}
+					onClick={() => handleOnClick("Resume")}
 					rel="noopener noreferrer"
 				>
 					My Resume
